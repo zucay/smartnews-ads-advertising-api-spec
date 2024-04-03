@@ -119,10 +119,12 @@ The following fields are available with the fields parameter and can be requeste
 | videoP50Views           | number | int    | The number of times your video was played at 50 % of its length.                               |
 | videoP75Views           | number | int    | The number of times your video was played at 75 % of its length.                               |
 | videoP95Views           | number | int    | The number of times your video was played at 95 % of its length.                               |
+| videoP100Views          | number | int    | Deprecated. Although the field is returned in the response, please refer to videoCompleteViews.|
 | videoCompleteViews      | number | int    | The number of times your video was played through their entire duration to completion.         |
 | videoCompleteViewRate   | number | float  | The average percentage that your video was played through their entire duration to completion. |
 | videoAvgViewTime        | number | float  | The average time a video was played.                                                           |
 | videoAvgViewRate        | number | float  | The average percentage that the video was played.                                              |
+| videoLength             | number | int    | The maximum length of the videos in milliseconds.                                              |
 | addToCart               | number | int    | The number of addToCart conversions taken on your ad.                                          |
 | purchase                | number | int    | The number of purchase conversions taken on your ad.                                           |
 | subscribe               | number | int    | The number of subscribe conversions taken on your ad.                                          |
@@ -138,6 +140,7 @@ The following fields are available with the fields parameter and can be requeste
 | completeRegistrationCvr | number | float  | The number of completeRegistration conversions you received divided by the number of clicks.   |
 | viewContentCpa          | number | float  | The cost you've paid divided by the number of viewContent conversions.                         |
 | viewContentCvr          | number | float  | The number of viewContent conversions you received divided by the number of clicks.            |
+| skAdNetworkConversions  | number | int    | The number of mobile conversions determined by SKAdNetwork.                                    |
 
 ### Fields of others
 
