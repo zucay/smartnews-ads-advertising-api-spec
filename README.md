@@ -37,20 +37,15 @@ To help you easily identify AMv2 data:
 
 
 ## Release Schedule
-Starting from the end of February 2024, AMv2 data support across our API endpoints will be rolled out in a phased approach, with the rollout expected to be complete by mid March 2024. Below is the provisional order of release for AMv2 data support:
-
+All scheduled releases were completed on 2024-04-24.
 
 ### Released items
-1. `amV2` field is added to responses for insights API endpoints. 
+1. `amV2` field is added to responses for insights API endpoints.
 1. [`GET /api/v1.0/creatives/{creativeId}/insights`](./smartnews-ads-insights-api.md#Endpoints)
 1. [`GET /api/v1.0/campaigns/{campaignId}/insights`](./smartnews-ads-insights-api.md#Endpoints)
 1. [`GET /api/v1.0/accounts/{accountId}/insights`](./smartnews-ads-insights-api.md#Endpoints)
-
-### Upcoming items
 1. [`GET /api/v1.0/campaigns/{campaignId}`](./smartnews-ads-management-api.md#get-v10campaignscampaignid) and [`GET /api/v1.0/accounts/{accountId}/campaigns`](./smartnews-ads-management-api.md#get-v10accountsaccountidcampaigns)
 1. [`GET /api/v1.0/creatives/{creativeId}`](./smartnews-ads-management-api.md#get-v10creativescreativeid) and [`GET /api/v1.0/campaigns/{campaignId}/creatives`](./smartnews-ads-management-api.md#get-v10campaignscampaignidcreatives)
-
-Please note that this order is provisional and subject to change based on development progress and testing outcomes. We encourage API users to refer to our detailed API documentation for the most current information on the release status of AMv2 data support for each endpoint.
 
 # Contact
  [https://smartnews-ads.zendesk.com/hc/ja/requests/new?ticket_form_id=1900000456167](https://smartnews-ads.zendesk.com/hc/ja/requests/new?ticket_form_id=1900000456167)
