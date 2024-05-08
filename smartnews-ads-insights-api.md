@@ -167,12 +167,13 @@ For users to distinguish AMv2 data from AMv1 data, the `amV2` object is added to
 
 ### `amV2` object
 
-| Name         | Type   | Format | Description                       |
-|--------------|--------|--------|-----------------------------------|
-| campaignId   | string |        | The identifier of the 3L campaign |
-| adGroupId    | string |        | The identifier of the 3L ad group |
-| campaignName | string |        | The name of the 3L campaign       |
-| adGroupName  | string |        | The name of the 3L ad group       |
+| Name             | Type    | Format | Description                                                                  |
+|------------------|---------|--------|------------------------------------------------------------------------------|
+| campaignId       | string  |        | The identifier of the 3L campaign                                            |
+| adGroupId        | string  |        | The identifier of the 3L ad group                                            |
+| campaignName     | string  |        | The name of the 3L campaign                                                  |
+| adGroupName      | string  |        | The name of the 3L ad group                                                  |
+| isMigratedFromV1 | boolean |        | The flag to indicate if the ad object is migrated from Ads Manager V1 (AMv1) |
 
 ## Unsupported parameters and response fields of AMv2 Data
 Because of the difference in the product specification of AMv1 and AMv2, the following request parameters and response fields will not available for AMv2 Data.
@@ -211,7 +212,8 @@ Providing any of the below unsupported parameters doesn't result in a bad reques
         "campaignId": "10000001",
         "adGroupId": "10000002",
         "campaignName": "AMv2 Campaign",
-        "adGroupName": "AMv2 Ad Group"
+        "adGroupName": "AMv2 Ad Group",
+        "isMigratedFromV1": false
       },
       "accountId": "10000000",
       "campaignId": "10000002", // AMv2 Ad Group ID
@@ -365,7 +367,8 @@ Account insights response example
         "campaignId": null,
         "campaignName": null,
         "adGroupId": null,
-        "adGroupName": null
+        "adGroupName": null,
+        "isMigratedFromV1": null
       }
     }
   ]
