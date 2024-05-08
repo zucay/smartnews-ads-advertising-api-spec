@@ -169,7 +169,7 @@ Note: Campaigns that has Dynamic Creative ON can not be retrieved through this A
 }
 ```
 
-##### AMv2 support (Scheduled to release at TBD)
+##### AMv2 support
 
 > Please be familiarized with the [general information of Ads Manager V2 support](./README.md#ads-manager-v2-amv2-support) first.
 
@@ -178,17 +178,17 @@ For users to distinguish AMv2 data from AMv1 data, the `amV2` object is added to
 
 ###### `amV2` object
 
-| Name                     | Type   | Format | Description                                                                          |
-|--------------------------|--------|--------|--------------------------------------------------------------------------------------|
-| campaignId               | string |        | The identifier of the 3L campaign                                                    |
-| adGroupId                | string |        | The identifier of the 3L ad group                                                    |
-| campaignName             | string |        | The name of the 3L campaign                                                          |
-| adGroupName              | string |        | The name of the 3L ad group                                                          |
-| campaignConfiguredStatus | string |        | The configured status of campaign with possible values as ACTIVE, PAUSED, or DELETED |
-| adGroupConfiguredStatus  | string |        | The configured status of ad group with possible values as ACTIVE, PAUSED, or DELETED | 
-| campaignSpendingLimit    | number | long   | The spending limit of the campaign in unit of JPY                                    | 
-| campaignDailyBudget      | number | long   | The daily budget of the campaign in unit of JPY                                      | 
-
+| Name                     | Type    | Format | Description                                                                          |
+|--------------------------|---------|--------|--------------------------------------------------------------------------------------|
+| campaignId               | string  |        | The identifier of the 3L campaign                                                    |
+| adGroupId                | string  |        | The identifier of the 3L ad group                                                    |
+| campaignName             | string  |        | The name of the 3L campaign                                                          |
+| adGroupName              | string  |        | The name of the 3L ad group                                                          |
+| campaignConfiguredStatus | string  |        | The configured status of campaign with possible values as ACTIVE, PAUSED, or DELETED |
+| adGroupConfiguredStatus  | string  |        | The configured status of ad group with possible values as ACTIVE, PAUSED, or DELETED | 
+| campaignSpendingLimit    | number  | long   | The spending limit of the campaign in unit of JPY                                    | 
+| campaignDailyBudget      | number  | long   | The daily budget of the campaign in unit of JPY                                      | 
+| isMigratedFromV1         | boolean |        | The flag to indicate if the ad object is migrated from Ads Manager V1 (AMv1)         |
 
 ###### Unsupported response fields of AMv2 Data
 Because of the difference in the product specification of AMv1 and AMv2, the following response fields will not available for AMv2 Data.
@@ -253,7 +253,8 @@ Because of the difference in the product specification of AMv1 and AMv2, the fol
         "campaignConfiguredStatus": "ACTIVE",
         "adGroupConfiguredStatus": "ACTIVE",
         "campaignSpendingLimit": 100000,
-        "campaignDailyBudget": 1000
+        "campaignDailyBudget": 1000,
+        "isMigratedFromV1": true
       }
     }
   ]
@@ -318,7 +319,7 @@ Note: Campaigns that has Dynamic Creative ON can not be retrieved through this A
 }
 ```
 
-##### AMv2 support (Scheduled to release at TBD)
+##### AMv2 support
 
 > Please be familiarized with the [general information of Ads Manager V2 support](./README.md#ads-manager-v2-amv2-support) first.
 
@@ -330,16 +331,17 @@ For users to distinguish AMv2 data from AMv1 data, the `amV2` object is added to
 
 ###### `amV2` object
 
-| Name                     | Type   | Format | Description                                                                          |
-|--------------------------|--------|--------|--------------------------------------------------------------------------------------|
-| campaignId               | string |        | The identifier of the 3L campaign                                                    |
-| adGroupId                | string |        | The identifier of the 3L ad group                                                    |
-| campaignName             | string |        | The name of the 3L campaign                                                          |
-| adGroupName              | string |        | The name of the 3L ad group                                                          |
-| campaignConfiguredStatus | string |        | The configured status of campaign with possible values as ACTIVE, PAUSED, or DELETED |
-| adGroupConfiguredStatus  | string |        | The configured status of ad group with possible values as ACTIVE, PAUSED, or DELETED | 
-| campaignSpendingLimit    | number | long   | The spending limit of the campaign in unit of JPY                                    | 
-| campaignDailyBudget      | number | long   | The daily budget of the campaign in unit of JPY                                      | 
+| Name                     | Type    | Format | Description                                                                          |
+|--------------------------|---------|--------|--------------------------------------------------------------------------------------|
+| campaignId               | string  |        | The identifier of the 3L campaign                                                    |
+| adGroupId                | string  |        | The identifier of the 3L ad group                                                    |
+| campaignName             | string  |        | The name of the 3L campaign                                                          |
+| adGroupName              | string  |        | The name of the 3L ad group                                                          |
+| campaignConfiguredStatus | string  |        | The configured status of campaign with possible values as ACTIVE, PAUSED, or DELETED |
+| adGroupConfiguredStatus  | string  |        | The configured status of ad group with possible values as ACTIVE, PAUSED, or DELETED | 
+| campaignSpendingLimit    | number  | long   | The spending limit of the campaign in unit of JPY                                    | 
+| campaignDailyBudget      | number  | long   | The daily budget of the campaign in unit of JPY                                      | 
+| isMigratedFromV1         | boolean |        | The flag to indicate if the ad object is migrated from Ads Manager V1 (AMv1)         |
 
 
 ###### Unsupported response fields of AMv2 Data
@@ -388,7 +390,8 @@ Because of the difference in the product specification of AMv1 and AMv2, the fol
       "campaignConfiguredStatus": "ACTIVE",
       "adGroupConfiguredStatus": "ACTIVE",
       "campaignSpendingLimit": 100000,
-      "campaignDailyBudget": 1000
+      "campaignDailyBudget": 1000,
+      "isMigratedFromV1": true
     }
   }
 }
@@ -726,7 +729,7 @@ You can determine if the carousel feature is enabled by the `isStoryCreative` fl
 
 ```
 
-##### AMv2 support (Scheduled to release at TBD)
+##### AMv2 support
 
 > Please be familiarized with the [general information of Ads Manager V2 support](./README.md#ads-manager-v2-amv2-support) first.
 
@@ -735,18 +738,19 @@ For users to distinguish AMv2 data from AMv1 data, the `amV2` object is added to
 
 ###### `amV2` object
 
-| Name                     | Type   | Format | Description                                                                          |
-|--------------------------|--------|--------|--------------------------------------------------------------------------------------|
-| campaignId               | string |        | The identifier of the 3L campaign                                                    |
-| adGroupId                | string |        | The identifier of the 3L ad group                                                    |
-| adId                     | string |        | The identifier of the 3L ad                                                          |
-| campaignName             | string |        | The name of the 3L campaign                                                          |
-| adGroupName              | string |        | The name of the 3L ad group                                                          |
-| adName                   | string |        | The name of the 3L ad                                                                |
-| campaignConfiguredStatus | string |        | The configured status of campaign with possible values as ACTIVE, PAUSED, or DELETED |
-| adGroupConfiguredStatus  | string |        | The configured status of ad group with possible values as ACTIVE, PAUSED, or DELETED | 
-| adConfiguredStatus       | string |        | The configured status of ad with possible values as ACTIVE, PAUSED, or DELETED       |
-| adCreativeFormatType     | string |        | The format of the Creative that defines the view attribution of the 3L ad            |
+| Name                     | Type    | Format | Description                                                                          |
+|--------------------------|---------|--------|--------------------------------------------------------------------------------------|
+| campaignId               | string  |        | The identifier of the 3L campaign                                                    |
+| adGroupId                | string  |        | The identifier of the 3L ad group                                                    |
+| adId                     | string  |        | The identifier of the 3L ad                                                          |
+| campaignName             | string  |        | The name of the 3L campaign                                                          |
+| adGroupName              | string  |        | The name of the 3L ad group                                                          |
+| adName                   | string  |        | The name of the 3L ad                                                                |
+| campaignConfiguredStatus | string  |        | The configured status of campaign with possible values as ACTIVE, PAUSED, or DELETED |
+| adGroupConfiguredStatus  | string  |        | The configured status of ad group with possible values as ACTIVE, PAUSED, or DELETED | 
+| adConfiguredStatus       | string  |        | The configured status of ad with possible values as ACTIVE, PAUSED, or DELETED       |
+| adCreativeFormatType     | string  |        | The format of the Creative that defines the view attribution of the 3L ad            |
+| isMigratedFromV1         | boolean |        | The flag to indicate if the ad object is migrated from Ads Manager V1 (AMv1)         |
 
 ###### Unsupported response fields of AMv2 Data
 Because of the difference in the product specification of AMv1 and AMv2, the following response fields will not available for AMv2 Data.
@@ -796,7 +800,8 @@ Because of the difference in the product specification of AMv1 and AMv2, the fol
         "campaignConfiguredStatus": "ACTIVE",
         "adGroupConfiguredStatus": "ACTIVE",
         "adConfiguredStatus": "ACTIVE",
-        "adCreativeFormatType": "IMAGE"
+        "adCreativeFormatType": "IMAGE",
+        "isMigratedFromV1": true
       }
     }
   ]
@@ -839,7 +844,7 @@ Retrieve the detail of a creative for the specified `creativeId`.
 }
 ```
 
-##### AMv2 support (Scheduled to release at TBD)
+##### AMv2 support
 
 > Please be familiarized with the [general information of Ads Manager V2 support](./README.md#ads-manager-v2-amv2-support) first.
 
@@ -848,18 +853,19 @@ For users to distinguish AMv2 data from AMv1 data, the `amV2` object is added to
 
 ###### `amV2` object
 
-| Name                     | Type   | Format | Description                                                                          |
-|--------------------------|--------|--------|--------------------------------------------------------------------------------------|
-| campaignId               | string |        | The identifier of the 3L campaign                                                    |
-| adGroupId                | string |        | The identifier of the 3L ad group                                                    |
-| adId                     | string |        | The identifier of the 3L ad                                                          |
-| campaignName             | string |        | The name of the 3L campaign                                                          |
-| adGroupName              | string |        | The name of the 3L ad group                                                          |
-| adName                   | string |        | The name of the 3L ad                                                                |
-| campaignConfiguredStatus | string |        | The configured status of campaign with possible values as ACTIVE, PAUSED, or DELETED |
-| adGroupConfiguredStatus  | string |        | The configured status of ad group with possible values as ACTIVE, PAUSED, or DELETED | 
-| adConfiguredStatus       | string |        | The configured status of ad with possible values as ACTIVE, PAUSED, or DELETED       |
-| adCreativeFormatType     | string |        | The format of the Creative that defines the view attribution of the 3L ad            |
+| Name                     | Type    | Format | Description                                                                          |
+|--------------------------|---------|--------|--------------------------------------------------------------------------------------|
+| campaignId               | string  |        | The identifier of the 3L campaign                                                    |
+| adGroupId                | string  |        | The identifier of the 3L ad group                                                    |
+| adId                     | string  |        | The identifier of the 3L ad                                                          |
+| campaignName             | string  |        | The name of the 3L campaign                                                          |
+| adGroupName              | string  |        | The name of the 3L ad group                                                          |
+| adName                   | string  |        | The name of the 3L ad                                                                |
+| campaignConfiguredStatus | string  |        | The configured status of campaign with possible values as ACTIVE, PAUSED, or DELETED |
+| adGroupConfiguredStatus  | string  |        | The configured status of ad group with possible values as ACTIVE, PAUSED, or DELETED | 
+| adConfiguredStatus       | string  |        | The configured status of ad with possible values as ACTIVE, PAUSED, or DELETED       |
+| adCreativeFormatType     | string  |        | The format of the Creative that defines the view attribution of the 3L ad            |
+| isMigratedFromV1         | boolean |        | The flag to indicate if the ad object is migrated from Ads Manager V1 (AMv1)         |
 
 ###### Unsupported response fields of AMv2 Data
 Because of the difference in the product specification of AMv1 and AMv2, the following response fields will not available for AMv2 Data.
@@ -906,7 +912,8 @@ Because of the difference in the product specification of AMv1 and AMv2, the fol
       "campaignConfiguredStatus": "ACTIVE",
       "adGroupConfiguredStatus": "ACTIVE",
       "adConfiguredStatus": "ACTIVE",
-      "adCreativeFormatType": "IMAGE"
+      "adCreativeFormatType": "IMAGE",
+      "isMigratedFromV1": true
     }
   }
 }
