@@ -175,6 +175,16 @@ For users to distinguish AMv2 data from AMv1 data, the `amV2` object is added to
 | adGroupName      | string  |        | The name of the 3L ad group                                                  |
 | isMigratedFromV1 | boolean |        | The flag to indicate if the ad object is migrated from Ads Manager V1 (AMv1) |
 
+### Special note for `amV2` insights metrics
+All metrics relating to conversion:
+- viewContent, viewContentCpa, viewContentCvr
+- addToCart, addToCartCpa, addToCartCvr
+- purchase, purchaseCpa, purchaseCvr
+- subscribe, subscribeCpa, subscribeCvr
+- completeRegistration, completeRegistrationCpa, completeRegistrationCvr
+
+are based on `click-through` attribution. `view-through` attribution is only supported on the UI and not available in the API.
+
 ## Unsupported parameters and response fields of AMv2 Data
 Because of the difference in the product specification of AMv1 and AMv2, the following request parameters and response fields will not available for AMv2 Data.
 
